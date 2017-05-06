@@ -21,7 +21,8 @@ setup(
     include_package_data=True,
     platforms='any',
     install_requires=[
-        'Flask'
+        'Flask',
+        'python-dotenv'
     ],
     classifiers=[
         'Environment :: Web Environment',
