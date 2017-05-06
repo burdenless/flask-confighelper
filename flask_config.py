@@ -4,7 +4,6 @@ class FlaskConfig(object):
 
     def __init__(self, app=None, config_mod=None, env_file=None):
         self.error_count = 0
-        self.config_vars = []
         self.app = app
 
         if app is not None:
@@ -36,20 +35,29 @@ class FlaskConfig(object):
         obj = getattr(module,mod)
         for item in dir(obj):
             if item[0:2] != '__':
-                self.check_required(obj, item)
+                var = getattr(obj, item)
+                if var == 'required':
+                    self.load_required(item)
+                else:
+                    self.load_optional(item)
 
         if self.error_count > 0:
             exit(1)
 
-    def check_required(self, obj, item):
-        var = getattr(obj, item)
-        if var == 'required':
-            try:
-                environ[item]
-                self.set_config(item)
-            except KeyError:
-                print('Error. {} is required, and was not found.'.format(item))
-                self.error_count += 1
+    def load_required(self, item):
+        try:
+            environ[item]
+            self.set_config(item)
+        except KeyError:
+            print('Error. {} is required, and was not found.'.format(item))
+            self.error_count += 1
+
+    def load_optional(self, item):
+        try:
+            environ[item]
+            self.set_config(item)
+        except KeyError:
+            pass
 
     def set_config(self, var):
         self.app.config[var] = environ[var]
