@@ -2,7 +2,7 @@
 Flask-Config
 -------------
 
-Automatically loads environment configurations and checks required config variables are present
+Helper utility for initializing environment configurations and verifying required config variables are present
 """
 
 from setuptools import setup
@@ -14,15 +14,14 @@ setup(
     license='MIT License',
     author='Bob Argenbright',
     author_email='your-email@example.com',
-    description='Handles loading environment configurations',
+    description='Helper for setting up environment configurations',
     long_description=__doc__,
     py_modules=['flask_config'],
     zip_safe=False,
     include_package_data=True,
     platforms='any',
     install_requires=[
-        'Flask',
-        'python-dotenv'
+        'Flask'
     ],
     classifiers=[
         'Environment :: Web Environment',
