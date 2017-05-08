@@ -10,10 +10,9 @@ from setuptools import setup
 setup(
     name='Flask-Config',
     version='1.0',
-    url='http://byt3smith.github.io/flask-config/',
+    url='https://github.com/byt3smith/flask-config',
     license='MIT License',
     author='Bob Argenbright',
-    author_email='your-email@example.com',
     description='Helper for setting up environment configurations',
     long_description=__doc__,
     py_modules=['flask_config'],
