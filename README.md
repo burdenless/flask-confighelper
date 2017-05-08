@@ -3,7 +3,9 @@ Helper utility to manage Flask app configuration. FlaskConfig checks that the ne
 variables are present, and loads them into the app config.
 
 ## Installation
-`pip install flask-config`
+```
+pip install flask-config
+```
 
 ## Usage
 ```
