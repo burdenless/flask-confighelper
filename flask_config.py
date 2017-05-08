@@ -2,29 +2,29 @@ from os import environ
 
 class FlaskConfig(object):
 
-    def __init__(self, app=None, config_mod=None, env_file=None):
+    def __init__(self, app=None, config_module=None):
         self.error_count = 0
         self.app = app
 
         if app is not None:
-            self.init_app(app, config_mod)
+            self.init_app(app, config_module)
 
-    def init_app(self, app, config_mod):
+    def init_app(self, app, config_module):
         try:
             app.config['environment'] = environ['ENVIRONMENT']
         except KeyError:
             print('ENVIRONMENT configuration not found, using default Config')
             app.config['environment'] = ''
 
-        if config_mod is None:
-            app.config['CONFIG_MOD'] = 'config'
+        if config_module is None:
+            app.config['config_module'] = 'config'
         else:
-            app.config['CONFIG_MOD'] = config_mod
+            app.config['config_module'] = config_module
 
         self.load_config()
 
     def load_config(self):
-        cfg = self.app.config['CONFIG_MOD']
+        cfg = self.app.config['config_module']
         try:
             module = __import__(cfg)
         except NameError:
