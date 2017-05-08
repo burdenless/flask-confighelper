@@ -24,7 +24,7 @@ print app.config['DATABASE_URI']
 #### config.py
 ```
 class Config(object):
-    DATABASE_URI = 'optional'
+    PORT = 'required'
     OPTIONAL = 'optional'
 
 class ProductionConfig(Config):
