@@ -1,6 +1,6 @@
 from os import environ
 
-class FlaskConfig(object):
+class FlaskConfigHelper(object):
 
     def __init__(self, app=None, config_module=None):
         self.error_count = 0

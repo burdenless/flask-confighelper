@@ -1,5 +1,5 @@
 """
-Flask-Config
+Flask-ConfigHelper
 -------------
 
 Helper utility for initializing environment configurations and verifying required config variables are present
@@ -8,14 +8,14 @@ Helper utility for initializing environment configurations and verifying require
 from setuptools import setup
 
 setup(
-    name='Flask-Config',
+    name='Flask-ConfigHelper',
     version='1.0',
-    url='https://github.com/byt3smith/flask-config',
+    url='https://github.com/byt3smith/flask-confighelper',
     license='MIT License',
     author='Bob Argenbright',
     description='Helper for setting up environment configurations',
     long_description=__doc__,
-    py_modules=['flask_config'],
+    py_modules=['flask_confighelper'],
     zip_safe=False,
     include_package_data=True,
     platforms='any',

@@ -1,19 +1,19 @@
-# Flask Config
+# Flask Config Helper
 Helper utility to manage Flask app configuration. FlaskConfig checks that the _required_ config
 variables are present, and loads them into the app config. It will also check for _optional_ configs, but will not return an error if they are not present.
 
 ## Installation
 ```
-pip install flask-config
+pip install flask-confighelper
 ```
 
 ## Usage
-The `flask-config` package will read the `ENVIRONMENT` key currently set, and will use the value of that key to identify which `*Config` object to load
+The `flask-confighelper` package will read the `ENVIRONMENT` key currently set, and will use the value of that key to identify which `*Config` object to load
 
 #### app.py
 ```
 from flask import Flask
-from flask_config import FlaskConfig
+from flask_config import FlaskConfigHelper
 
 app = Flask(__name__)
 FlaskConfig(app, config_module='config')
