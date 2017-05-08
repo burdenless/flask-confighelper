@@ -9,7 +9,7 @@ from setuptools import setup
 
 setup(
     name='flask-confighelper',
-    version='1.0',
+    version='1.0.0',
     url='https://github.com/byt3smith/flask-confighelper',
     license='MIT License',
     author='Bob Argenbright',

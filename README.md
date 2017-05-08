@@ -1,4 +1,6 @@
 # Flask Config Helper
+[![PyPI version](https://badge.fury.io/py/flask-confighelper.svg)](https://badge.fury.io/py/flask-confighelper)
+
 Helper utility to manage Flask app configuration. FlaskConfig checks that the _required_ config
 variables are present, and loads them into the app config. It will also check for _optional_ configs, but will not return an error if they are not present.
 
