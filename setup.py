@@ -8,7 +8,7 @@ Helper utility for initializing environment configurations and verifying require
 from setuptools import setup
 
 setup(
-    name='Flask-ConfigHelper',
+    name='flask-confighelper',
     version='1.0',
     url='https://github.com/byt3smith/flask-confighelper',
     license='MIT License',

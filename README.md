@@ -16,7 +16,7 @@ from flask import Flask
 from flask_config import FlaskConfigHelper
 
 app = Flask(__name__)
-FlaskConfig(app, config_module='config')
+FlaskConfigHelper(app, config_module='config')
 
 print app.config['DATABASE_URI']
 ```
